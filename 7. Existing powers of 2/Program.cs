@@ -15,9 +15,16 @@ class Program
         }
 
         List<uint> powers = PowersOfTwo(input);
-        powers.Sort();
-        System.Console.WriteLine(string.Join(" ", powers));
 
+        if (powers.Count == 0)
+        {
+            Console.WriteLine("NA");
+        }
+        else
+        {
+            powers.Sort();
+            System.Console.WriteLine(string.Join(" ", powers));
+        }
     }
 
     static List<uint> PowersOfTwo(List<uint> input)
